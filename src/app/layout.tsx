@@ -1,33 +1,30 @@
 import type { Metadata } from "next";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import NavbarComponent from "./_components/Navbar";
 
-export const metadata : Metadata = {
-    title: "Michael Smith",
-    description: "The portfolio Website of Michael Smith",
+const jetbrainsMono = JetBrains_Mono({
+    variable: "--font-jetbrains",
+    subsets: ["latin"],
+    display: "swap"
+})
+
+export const metadata: Metadata = {
+    title: "msmith.codes",
+    description: "I'm spending every change I get to learn new technologies.",
 };
 
-interface RootLayoutProps 
+interface RootLayoutProps
 {
-    children: React.ReactNode;
-}
+    children : React.ReactNode;
+};
 
 export default function RootLayout(props : RootLayoutProps) 
 {
     return (
         <html lang="en">
-            <body>
-                <header>
-                    <hr/>
-                        <NavbarComponent />
-                    <hr/>
-                </header>   
+            <body className={`${jetbrainsMono.className} antialiased`}>
                 {props.children}
-                <footer>
-                    
-                </footer>
             </body>
         </html>
     );
 }
-
