@@ -15,7 +15,7 @@ export default function Button(props : ButtonProps)
             <a 
                 href={props.href} 
                 target={props.target}
-                className={`w-128 text-center px-6 py-3 rounded-full bg-${props.color} text-${props.fontColor} font-semibold hover:bg-${props.hoverColor} transition`}
+                className={`w-128 text-center px-6 py-3 rounded-full ${props.color} ${props.fontColor} font-semibold hover:${props.hoverColor} transition`}
             >
                 {props.label}
             </a>

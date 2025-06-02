@@ -7,8 +7,8 @@ import RoundedImage from "~/_components/RoundedImage";
 export default function HomePage() 
 {
     const buttons : ButtonItem[] = [
-        { label: "Learn Programming", target: '_self', href: "/learn" },
-        { label: "Vortix", target: '_blank', href: "https://store.steampowered.com/app/2124110/Vortix/"}
+        { label: "Work Experience", target: '_self', href: "/experience" },
+        { label: "Tutoring", target: '_self', href: "/tutoring" }
     ]
 
     return (
@@ -34,7 +34,7 @@ export default function HomePage()
                         delaySpeed={2000}
                     />
                 </p>
-                <ButtonList buttons={buttons} color="blue-600" hoverColor="blue-700" fontColor="white" /> 
+                <ButtonList buttons={buttons} color="bg-blue-600" hoverColor="bg-blue-700" fontColor="text-white" /> 
             </section>
         </main>
   );

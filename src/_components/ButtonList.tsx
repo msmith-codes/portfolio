@@ -23,7 +23,7 @@ export default function ButtonList(props : ButtonListProps)
                     key={idx} 
                     href={btn.href} 
                     target={btn.target}
-                    className={`w-128 text-center px-6 py-3 rounded-full bg-${props.color} text-${props.fontColor} font-semibold hover:bg-${props.hoverColor} transition`}
+                    className={`w-128 text-center px-6 py-3 rounded-full ${props.color} ${props.fontColor} font-semibold hover:${props.hoverColor}] transition`}
                 >
                     {btn.label}
                 </a>
