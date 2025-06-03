@@ -7,8 +7,9 @@ import RoundedImage from "~/_components/RoundedImage";
 export default function HomePage() 
 {
     const buttons : ButtonItem[] = [
-        { label: "Work Experience", target: '_self', href: "/experience" },
-        { label: "Tutoring", target: '_self', href: "/tutoring" }
+        { label: "Experience", target: '_self', href: "/experience" },
+        { label: "Tutoring", target: '_self', href: "/tutoring" },
+        { label: "Resources", target: '_self', href: "/resources" }
     ]
 
     return (
@@ -25,7 +26,7 @@ export default function HomePage()
                 />
                 <p className="text-2xl font-jetbrains font-medium text-white">
                     <Typewriter
-                        words={["Michael Smith", "Backend Programmer", "Indie Game Developer"]}
+                        words={["Michael Smith", "Backend Programmer", "Programming Tutor"]}
                         loop={true}
                         cursor
                         cursorStyle="_"

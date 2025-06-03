@@ -24,3 +24,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.shiki {
+  font-family: 'Fira Code', monospace;
+  background-color: #2e3440; /* Adjust based on your chosen theme */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}

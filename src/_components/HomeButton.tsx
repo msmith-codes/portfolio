@@ -4,14 +4,15 @@ export default function HomeButton()
 {
     return(
         <>
-            <Button
-                color="bg-blue-600"
-                hoverColor="bg-blue-800"
-                fontColor="text-white"
-                href="/"
-                target="_self"
-                label="Home"
-            />
+            <div className="flex flex-col items-center gap-4">
+                <a 
+                    href="/"                    
+                    target="_self"
+                    className={`w-32 text-center px-6 py-3 rounded-lg bg-blue-600 textehite font-semibold hover:bg-blue-700 transition`}
+                >
+                    Home
+                </a>
+            </div>
         </>
     )
 }
