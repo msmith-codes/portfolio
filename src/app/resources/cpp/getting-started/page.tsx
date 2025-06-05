@@ -134,7 +134,7 @@ export default function CPPGettingStarted()
                         <p className="text-white text-xl">Arch / Manjaro</p>
                         <CodeBlock
                             language="shell"
-                            code={`sudo pacman -S base-devl gdb`}
+                            code={`sudo pacman -S gcc gdb`}
                         />
 
                         <p className="text-white text-xl">Ubuntu / Debian</p>
