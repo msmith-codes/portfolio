@@ -1,4 +1,3 @@
-import HomeButton from "./HomeButton";
 import KeepScrolling from "./KeepScrolling";
 
 interface PageHeroProps

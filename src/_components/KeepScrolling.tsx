@@ -42,7 +42,7 @@ export default function KeepScrolling()
                 >
                     <ChevronDown className="w-16 h-16" />
                 </motion.div>
-                <p className="text-slate-500 text-lg">Scroll Down</p>
+                <p className="text-slate-500 text-lg">Keep Scroll Down</p>
             </motion.div>
         )
     ); 
