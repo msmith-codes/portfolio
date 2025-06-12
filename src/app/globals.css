@@ -33,3 +33,21 @@ body {
   line-height: 1.5;
   overflow-x: auto;
 }
+
+pre.shiki.with-line-numbers {
+    padding-left: 3.5em;
+    position: relative;
+}
+
+.shiki-line {
+    display: flex;
+}
+
+.shiki-line-number {
+    display: inline-block;
+    width: 2.5em;
+    text-align: right;
+    padding-right: 1em;
+    color: #666;
+    user-select: none;
+}

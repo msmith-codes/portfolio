@@ -6,7 +6,7 @@ export async function highlightCode(code: string, lang: string): Promise<string>
     if (!highlighter) {
         highlighter = await createHighlighter({
             themes: ['one-dark-pro'],
-            langs: ['c++', 'shell']
+            langs: ['c++', 'shell', 'makefile']
         });
 
     }

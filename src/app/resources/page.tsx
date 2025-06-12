@@ -7,6 +7,7 @@ export default function ResourcesPage()
 {
     const cpp : ButtonItem[] = [
         { label: "Getting Started", target: '_self', href: "resources/cpp/getting-started" },
+        { label: "Makefiles", target: '_self', href: "resources/cpp/makefiles" },
     ]; 
     const java : ButtonItem[] = [
         { label: "Getting Started", target: '_self', href: "resources/java/getting-started" },
