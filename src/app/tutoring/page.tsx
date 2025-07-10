@@ -7,7 +7,7 @@ export default function TutoringPage()
 {
     return(
         <main className="flex flex-col row-start-2">
-            <PageHero line1="Private Tutoring" line2="Guiding students through programming."/>
+            <PageHero line1="Private Tutoring" line2="Guiding students through programming." back="/"/>
             <section id="next-section" className="bg-gray-800 flex flex-col justify-center items-center text-center gap-10 min-h-screen">
                 <p className="text-red-500 text-2xl"><strong>THE TRUTH:</strong></p>
                 <p className="text-white text-6xl">PROGRAMMING IS A <br/> CHALLENGE</p>

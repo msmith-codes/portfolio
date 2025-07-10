@@ -7,7 +7,7 @@ export default function ExperiencePage()
 {
     return(
         <main className="flex flex-col row-start-2">
-            <PageHero line1="My Journey Through Code" line2="Here's what I've built"/>
+            <PageHero line1="My Journey Through Code" line2="Here's what I've built" back="/"/>
             <section id="next-section" className="bg-gray-800 flex flex-col justify-center items-center text-center gap-10 min-h-screen">
                 <p className="text-red-500 text-2xl"><strong>IT & Software Engineer Intern</strong></p>
                 <p className="text-white text-6xl">GS RETAIL SERVICES</p>

@@ -34,7 +34,7 @@ export default function CPPGettingStarted()
 
     return(
         <main className="flex flex-col row-start-2">
-            <PageHero line1="C++" line2="Getting Started" />
+            <PageHero line1="C++" line2="Getting Started" back="/resources"/>
             <section id="next-section" className="bg-gray-800 flex flex-col justify-center items-center text-center gap-10 min-h-screen">
                 <p className="text-white text-6xl">Select Your Operating System</p>
                 <ButtonList buttons={os} color="bg-blue-600" hoverColor="bg-blue-700" fontColor="text-white" /> 

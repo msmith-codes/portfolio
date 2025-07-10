@@ -46,8 +46,14 @@ tar:
 
     return(
         <main className="flex flex-col row-start-2">
-            <PageHero line1="C++" line2="Makefiles" />
-            <section id="next-section" className="bg-gray-800 flex flex-col justify-center items-center gap-10 min-h-screen">
+            <PageHero line1="C++" line2="Makefiles" back="/resources"/>
+            <section id="next-section" className="bg-gray-800 flex flex-col justify-center items-center gap-10 h-350">
+                <p className="text-red-500 text-2xl"><strong>It's not that bad...</strong></p>
+                <p className="text-white text-6xl">EXAMPLE MAKEFILE</p>
+                <p className="text-white text-md text-left max-w-200">
+                    Here is an example of a make file that I have used for multifile C++ projects.
+                    This make file has been mainly used on Linux.
+                </p> 
                 <CodeBlock
                     language="makefile"
                     code={makefile}

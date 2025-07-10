@@ -9,16 +9,10 @@ export default function ResourcesPage()
         { label: "Getting Started", target: '_self', href: "resources/cpp/getting-started" },
         { label: "Makefiles", target: '_self', href: "resources/cpp/makefiles" },
     ]; 
-    const java : ButtonItem[] = [
-        { label: "Getting Started", target: '_self', href: "resources/java/getting-started" },
-    ];
-    const python : ButtonItem[] = [
-        { label: "Getting Started", target: '_self', href: "resources/java/getting-started" },
-    ];
-    
+
     return(
         <main className="flex flex-col row-start-2">
-            <PageHero line1="Free Learning Resources" line2="Tutorials, Tools and Tips for Every Programmer" />
+            <PageHero line1="Free Learning Resources" line2="Tutorials, Tools and Tips for Every Programmer" back="/"/>
             <section id="next-section" className="bg-gray-800 flex flex-col justify-center items-center text-center gap-10 min-h-screen">
                 <p className="text-white text-6xl">C++</p>
                 <ButtonList buttons={cpp} color="bg-blue-600" hoverColor="bg-blue-700" fontColor="text-white" /> 
