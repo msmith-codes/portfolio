@@ -9,7 +9,7 @@ export default function HomePage()
     const buttons : ButtonItem[] = [
         { label: "Experience", target: '_self', href: "/experience" },
         { label: "Tutoring", target: '_self', href: "/tutoring" },
-        { label: "Resources", target: '_self', href: "/resources" }
+        { label: "Resources", target: '_self', href: "/resources" },
     ]
 
     return (
@@ -26,7 +26,7 @@ export default function HomePage()
                 />
                 <p className="text-2xl font-jetbrains font-medium text-white">
                     <Typewriter
-                        words={["Michael Smith", "Backend Programmer", "Programming Tutor"]}
+                        words={["Michael Smith", "Backend Programmer", "Programming Tutor", "Game Developer"]}
                         loop={true}
                         cursor
                         cursorStyle="_"

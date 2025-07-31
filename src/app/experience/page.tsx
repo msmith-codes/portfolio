@@ -41,10 +41,30 @@ export default function ExperiencePage()
                 />
 
             </section>
-            <section id="tutoring" className="bg-gray-800 flex flex-col justify-center items-center text-center gap-10 min-h-screen">
+            <section id="next-section" className="bg-gray-800 flex flex-col justify-center items-center text-center gap-10 min-h-screen">
+                <p className="text-red-500 text-2xl"><strong>Gameplay Programmer</strong></p>
+                <p className="text-white text-6xl">VORTIX</p>
+                <p className="text-white text-2xl"><strong>December 2024 - Present</strong></p>
+                <p className="text-slate-500 text-xl">------------------</p>
+                <p className="text-white text-md text-left max-w-200">
+                    I have a passion for video games and wanted to create my own! 
+                    Vortix is a sumo marble multiplayer PvP game where you try to knock your opponent out of a shrinking ring. 
+                </p>
+                <Button 
+                    color="bg-blue-600"
+                    hoverColor="bg-blue-700"
+                    fontColor="text-white"
+                    href="https://store.steampowered.com/app/2124110/Vortix/"
+                    target="_blank"
+                    label="Check it out!"
+                />
+
+            </section>
+
+            <section id="tutoring" className="bg-gray-700 flex flex-col justify-center items-center text-center gap-10 min-h-screen">
                 <p className="text-red-500 text-2xl"><strong>Volunteer</strong></p>
                 <p className="text-white text-6xl">COMPUTER REACH</p>
-                <p className="text-white text-2xl"><strong>2016 - 2022</strong></p>
+                <p className="text-white text-2xl"><strong>2016 - 2021</strong></p>
                 <p className="text-slate-500 text-xl">------------------</p>
                 <p className="text-white text-md text-left max-w-200">
                     At Computer Reach, I disassembled, assembed, and re-imaged computers for recycling that would then be donated to communities and schools.  
