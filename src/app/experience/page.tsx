@@ -69,6 +69,14 @@ export default function ExperiencePage()
                 <p className="text-white text-md text-left max-w-200">
                     At Computer Reach, I disassembled, assembed, and re-imaged computers for recycling that would then be donated to communities and schools.  
                 </p>
+                <Button 
+                    color="bg-blue-600"
+                    hoverColor="bg-blue-700"
+                    fontColor="text-white"
+                    href="https://www.computerreach.org/"                    
+                    target="_blank"
+                    label="Learn More!"
+                />
             </section>
         </main>
     )
