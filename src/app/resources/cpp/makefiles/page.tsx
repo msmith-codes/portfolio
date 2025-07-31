@@ -37,12 +37,12 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
     $(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-    rm -rf $(BUILD_DIR) $(TARGET)
+    @rm -rf $(BUILD_DIR) $(TARGET)
 
 tar:
-    tar -czf project.tar.gz Makefile $(SRCS) $(wildcard $(INCLUDE_DIR)/*.hpp) $(wildcard $(INCLUDE_DIR)/*.h)
+    @tar -czf project.tar.gz Makefile $(SRCS) $(wildcard $(INCLUDE_DIR)/*.hpp) $(wildcard $(INCLUDE_DIR)/*.h)
 
-.PHONY: all clean`;
+.PHONY: all tar clean`;
 
     return(
         <main className="flex flex-col row-start-2">
