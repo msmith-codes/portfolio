@@ -1,53 +1,96 @@
+
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: #f7f8fa;
+  --foreground: #181c20;
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --accent: #fbbf24;
+  --muted: #e5e7eb;
+  --border-radius: 1.2rem;
+  --shadow: 0 4px 24px 0 rgba(30, 64, 175, 0.08);
+  --font-sans: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-mono: 'Fira Code', 'JetBrains Mono', monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #10141a;
+    --foreground: #f3f4f6;
+    --primary: #60a5fa;
+    --primary-dark: #2563eb;
+    --accent: #fbbf24;
+    --muted: #23272f;
+    --shadow: 0 4px 24px 0 rgba(96, 165, 250, 0.08);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--primary-dark);
+}
+
+button, .button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+button:hover, .button:hover {
+  background: var(--primary-dark);
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(30, 64, 175, 0.12);
+}
+
+section {
+  margin-bottom: 2.5rem;
 }
 
 .shiki {
-  font-family: 'Fira Code', monospace;
-  background-color: #2e3440; /* Adjust based on your chosen theme */
-  padding: 1rem;
-  border-radius: 0.5rem;
-  line-height: 1.5;
+  font-family: var(--font-mono);
+  background-color: #23272f;
+  color: #f3f4f6;
+  padding: 1.2rem;
+  border-radius: 0.7rem;
+  line-height: 1.6;
   overflow-x: auto;
+  margin-bottom: 1.5rem;
 }
 
 pre.shiki.with-line-numbers {
-    padding-left: 3.5em;
-    position: relative;
+  padding-left: 3.5em;
+  position: relative;
 }
 
 .shiki-line {
-    display: flex;
+  display: flex;
 }
 
 .shiki-line-number {
-    display: inline-block;
-    width: 2.5em;
-    text-align: right;
-    padding-right: 1em;
-    color: #666;
-    user-select: none;
+  display: inline-block;
+  width: 2.5em;
+  text-align: right;
+  padding-right: 1em;
+  color: #888;
+  user-select: none;
 }
