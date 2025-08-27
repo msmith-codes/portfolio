@@ -9,12 +9,27 @@ export interface ButtonItem
 
 interface ButtonListProps {
     buttons: ButtonItem[];
+    color: string;
+    hoverColor: string;
+    fontColor: string;
 }
 
 export default function ButtonList(props: ButtonListProps) {
+    const { buttons, color, hoverColor, fontColor } = props;
     return (
         <div className="flex flex-col items-center gap-4">
-            {props.buttons.map((btn: ButtonItem, idx: number) => {
+            {buttons.map((btn: ButtonItem, idx: number) => {
+                const baseStyle = {
+                    backgroundColor: color,
+                    color: fontColor,
+                    transition: 'background-color 0.2s',
+                };
+                const handleMouseOver = (e: React.MouseEvent<HTMLElement>) => {
+                    (e.currentTarget as HTMLElement).style.backgroundColor = hoverColor;
+                };
+                const handleMouseOut = (e: React.MouseEvent<HTMLElement>) => {
+                    (e.currentTarget as HTMLElement).style.backgroundColor = color;
+                };
                 if (btn.href) {
                     return (
                         <a
@@ -22,6 +37,9 @@ export default function ButtonList(props: ButtonListProps) {
                             href={btn.href}
                             target={btn.target}
                             className="button w-128 text-center"
+                            style={baseStyle}
+                            onMouseOver={handleMouseOver}
+                            onMouseOut={handleMouseOut}
                         >
                             {btn.label}
                         </a>
@@ -32,6 +50,9 @@ export default function ButtonList(props: ButtonListProps) {
                         key={idx}
                         onClick={btn.onClick || undefined}
                         className="button w-128 text-center"
+                        style={baseStyle}
+                        onMouseOver={handleMouseOver}
+                        onMouseOut={handleMouseOut}
                     >
                         {btn.label}
                     </button>

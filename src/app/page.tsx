@@ -40,7 +40,12 @@ export default function HomePage() {
                         />
                     </p>
                     <div className="w-full flex flex-col gap-4 mt-2">
-                        <ButtonList buttons={buttons} />
+                        <ButtonList 
+                            buttons={buttons} 
+                            color="#2563eb" 
+                            hoverColor="#1d4ed8" 
+                            fontColor="#fff" 
+                        />
                     </div>
                 </div>
             </section>
