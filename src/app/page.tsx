@@ -9,6 +9,7 @@ import RoundedImage from "~/_components/RoundedImage";
 export default function HomePage() {
     const buttons: ButtonItem[] = [
         { label: "Experience", target: '_self', href: "/experience" },
+        { label: "University Assignments", target: '_self', href: "/assignments" },
         { label: "Tutoring", target: '_self', href: "/tutoring" },
         { label: "Resources", target: '_self', href: "/resources" },
     ];
