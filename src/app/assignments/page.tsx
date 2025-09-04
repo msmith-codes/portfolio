@@ -12,6 +12,7 @@ export default function AssignmentsPage()
                 <p className="text-slate-500 text-xl">------------------</p>
                 <ol>
                     <li><Link href={"/assignments/web-programming-1/"}>Web Programming 1</Link></li>
+                    <li><Link href={"/assignments/intro-to-creative-writing/"}>Intro to Creative Writing</Link></li>
                 </ol>
             </section>
          </main>
