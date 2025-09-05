@@ -11,6 +11,7 @@ export default function WebProgramming1Page()
                 <p className="text-white text-6xl">Assignments</p>
                 <p className="text-slate-500 text-xl">------------------</p>
                 <ol>
+                    <li><a href={"/work/web-programming-1/case_study/index.html"}>Case Study: Rubik's Cube Timer</a></li>
                     <li><a href={"/work/web-programming-1/assignments/project01-01.html"}>Assignment: Hands-On Project 1-1</a></li>
                     <li><a href={"/work/web-programming-1/assignments/project01-02.html"}>Assignment: Hands-On Project 1-2</a></li>
                     <li><a href={"/work/web-programming-1/assignments/project01-03.html"}>Assignment: Hands-On Project 1-3</a></li>
