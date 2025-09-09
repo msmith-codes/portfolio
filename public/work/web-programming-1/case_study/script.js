@@ -16,8 +16,6 @@ let times = [];
         timerDisplay.textContent = formatTime(elapsed);
     }
 
-// No button controls; all logic is handled by spacebar
-
     function renderTimes() {
         timesList.innerHTML = '';
         times.forEach((t, i) => {
@@ -26,17 +24,15 @@ let times = [];
             timesList.appendChild(li);
         });
     }
-    // Spacebar hold to prepare, release to start, press again to stop
+
     let readyToStart = false;
     document.addEventListener('keydown', function(e) {
         if (e.code === 'Space' && !e.repeat) {
             e.preventDefault();
             if (!running && !readyToStart) {
-                // Prepare to start (show a visual cue if desired)
                 readyToStart = true;
-                timerDisplay.style.color = '#f39c12'; // orange for ready
+                timerDisplay.style.color = '#f39c12'; 
             } else if (running) {
-                // Stop timer and record time
                 running = false;
                 clearInterval(interval);
                 const elapsed = Date.now() - startTime;
@@ -46,7 +42,6 @@ let times = [];
                 timerDisplay.style.color = '#fff';
             }
         }
-        // R to reset timer
         if (e.code === 'KeyR' && !e.repeat) {
             running = false;
             readyToStart = false;
@@ -58,11 +53,10 @@ let times = [];
 
     document.addEventListener('keyup', function(e) {
         if (e.code === 'Space' && readyToStart && !running) {
-            // Start timer on spacebar release
             readyToStart = false;
             running = true;
             startTime = Date.now();
             interval = setInterval(updateTimer, 10);
-            timerDisplay.style.color = '#2ecc40'; // green for running
+            timerDisplay.style.color = '#2ecc40'; 
         }
     });
