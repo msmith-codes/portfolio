@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loan Calculator</title>
+        <script src="loan_calc.js"></script>
+    </head>
+
+    <body>
+        <h1>Loan Calculator</h1>
+        <hr>
+        <form> 
+            <label for="aprInput">Interest Rate (APR):</label><br>
+            <input type="number" step="0.01" id="aprInput"><br>
+
+            <label for="amtBorrowInput">Borrow Amount:</label><br>
+            <input type="number" step="0.01" id="amtBorrowInput"><br>
+
+            <label for="numMonthsInput">Number of Months:</label><br>
+            <input type="number" step="1.0" id="numMonthsInput"><br>
+
+            <label for="numCompoundsInput">Number of Compounds:</label><br>
+            <input type="number" step="1.0" id="numCompoundsInput"><br><br>
+
+            <button onclick="calculate(event);">Calculate</button>
+            <br>
+            <p>The payment is: <span id="result"></span></p>
+        </form>
+    </body>
+</html>
