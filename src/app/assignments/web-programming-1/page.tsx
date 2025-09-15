@@ -16,6 +16,10 @@ export default function WebProgramming1Page()
                     <li><a href={"/work/web-programming-1/assignments/project01-02.html"}>Assignment: Hands-On Project 1-2</a></li>
                     <li><a href={"/work/web-programming-1/assignments/project01-03.html"}>Assignment: Hands-On Project 1-3</a></li>
                     <li><a href={"/work/web-programming-1/in_class/loan_calculator/index.html"}>In Class: Loan Calculator</a></li>
+                    <li><a href={"/work/web-programming-1/assignments/project02-01.html"}>Assignment: Hands-On Project 2-1</a></li>
+                    <li><a href={"/work/web-programming-1/assignments/project02-02.html"}>Assignment: Hands-On Project 2-2</a></li>
+                    <li><a href={"/work/web-programming-1/assignments/project02-03.html"}>Assignment: Hands-On Project 2-3</a></li>
+                    <li><a href={"/work/web-programming-1/assignments/project02-04.html"}>Assignment: Hands-On Project 2-4</a></li>
                 </ol>
             </section>
          </main>
