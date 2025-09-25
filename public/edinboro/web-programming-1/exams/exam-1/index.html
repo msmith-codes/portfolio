@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exam 1 - Web Programming I</title>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <h1>Dice Roller</h1>
+        <h2>(Random Number Generator)</h2>
+        <form>
+            <label for="sides">Enter the number of sides per dice:</label> <br>
+            <input type="number" id="sides" name="sides" value="6"><br><br>
+
+            <label for="times">Enter the number of times to roll:</label> <br>
+            <input type="number" id="times" name="times" value="4"><br><br>
+            
+            <button onclick="rollDice(event);">Roll</button><br>
+        </form>  
+        <p>Dice:</p>
+        <p><strong>Rolls: <span id="result"></span></strong></p>
+        <button onclick="clearResults(event);">Clear</button>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Score Calculator</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <h1>Test Score Calculator</h1>
+    
+    <div>
+        <label for="scoreInput">Enter Test Score (0-100):</label>
+        <input type="number" id="scoreInput" min="0" max="100" placeholder="Enter percentage (e.g., 85)">
+        <div id="errorMessage" style="display: none; color: red;"></div>
+    </div>
+    
+    <div>
+        <button onclick="addScore()">Add Score</button>
+        <button onclick="calculateAverage()">Calculate Average</button>
+        <button onclick="clearScores()">Clear All</button>
+    </div>
+    
+    <div id="results" style="display: none;">
+        <h3>Test Scores:</h3>
+        <div id="scoresList"></div>
+        <div id="averageDisplay" style="display: none;"></div>
+    </div>
+</body>
+</html>
