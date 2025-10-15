@@ -29,13 +29,6 @@ export default function About() {
                     <h2 className="text-2xl font-bold text-foreground font-mono">Skills & Expertise</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div>
-                            <h3 className="text-xl font-bold text-foreground font-mono mb-2">Game Development</h3>
-                            <ul className="text-foreground/80 font-mono">
-                                <li>Godot</li>
-                                <li>RayLib</li>
-                            </ul>
-                        </div>
-                        <div>
                             <h3 className="text-xl font-bold text-foreground font-mono mb-2">Software Development</h3>
                             <ul className="text-foreground/80 font-mono">
                                 <li>C/C++</li>
@@ -48,6 +41,14 @@ export default function About() {
                             <ul className="text-foreground/80 font-mono">
                                 <li>Next.js</li>
                                 <li>HTML/CSS/JS</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-bold text-foreground font-mono mb-2">Editor and Setup</h3>
+                            <ul className="text-foreground/80 font-mono">
+                                <li>Editor: NeoVim</li>
+                                <li>OS: Arch Linux</li>
+                                <li>Shell: Bash</li>
                             </ul>
                         </div>
                     </div>
