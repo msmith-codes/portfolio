@@ -29,7 +29,8 @@ export default function Edinboro()
                 { name: "Project 06-03", href: "/edinboro/web-programming-1/assignments/project06-03/index.html" }
             ],
             tests: [
-                { name: "Exam 1", href: "/edinboro/web-programming-1/exams/exam-1/index.html" }
+                { name: "Exam 1", href: "/edinboro/web-programming-1/exams/exam-1/index.html" },
+                { name: "Exam 2", href: "/edinboro/web-programming-1/exams/exam-2/index.html" }
             ]
         }   
     ]

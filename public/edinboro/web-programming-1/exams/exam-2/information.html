@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exam 2 - Web Programming I</title>
+        <script src="information.js" defer></script>
+        <style>
+            .info-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+            .info-table caption { caption-side: top; text-align: left; font-weight: 700; margin-bottom: 0.5rem; }
+            .info-table th, .info-table td { border: 1px solid #d1d5db; padding: 0.5rem 0.6rem; vertical-align: top; }
+            .info-table th { background: #f3f4f6; text-align: left; width: 32%; }
+            .info-table td { width: 68%; }
+            @media (max-width: 480px) {
+                .info-table, .info-table tbody, .info-table tr { display: block; width: 100%; }
+                .info-table th, .info-table td { display: block; width: 100%; }
+                .info-table th { border-right: none; }
+            }
+        </style>
+    </head>
+    <body>
+        <main class="container">
+            <h1>The Information</h1>
+            <table class="info-table" aria-describedby="info-desc">
+                <tbody>
+                    <tr>
+                        <th scope="row">First name</th>
+                        <td id="firstNameVal">—</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Last name</th>
+                        <td id="lastNameVal">—</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Email</th>
+                        <td id="emailVal">—</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">State</th>
+                        <td id="stateVal">—</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>

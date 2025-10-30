@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exam 2 - Web Programming I</title>
+    </head>
+    <body>
+        <main class="container">
+            <h1>Sign In</h1>
+            <form id="loginForm" action="information.html" method="get">
+                <div class="field">
+                    <label for="firstName">First name</label>
+                    <input type="text" id="firstName" name="firstName" required title="You must enter your first name.">
+                </div>
+                <br>
+                <div class="field">
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lastName" name="lastName" required title="You must enter your last name.">
+                </div>
+                <br>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required pattern="[A-Za-z]+@[A-Za-z]+\.edu" title="Your email must be any number of characters the @ symbol then more letters end with .edu">
+                </div>
+                <br>
+                <div class="field" role="radiogroup" aria-labelledby="state-label" aria-describedby="state-desc">
+                    <div id="state-label" style="font-weight:600;">State</div>
+                    <div id="state-desc">Choose one:</div>
+                    <div style="margin-top:0.5rem;">
+                        <div>
+                            <input type="radio" id="state-PA" name="state" value="PA" required>
+                            <label for="state-PA">PA</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="state-OH" name="state" value="OH">
+                            <label for="state-OH">OH</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="state-NW" name="state" value="NW">
+                            <label for="state-NW">NW</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="state-WV" name="state" value="WV">
+                            <label for="state-WV">WV</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="actions">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
