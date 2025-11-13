@@ -71,7 +71,7 @@ export default function NavigationBar()
             <div className="flex gap-6">
                 <NavigationButton label="Home" href="/" target='_self'/>
                 <NavigationButton label="Portfolio" href="/portfolio" target='_self'/>
-                <NavigationButton label="Resume" href="/resume" target='_self'/>
+                <NavigationButton label="Resume" href="/resume.pdf" target='_blank'/>
                 <NavigationButton label="About" href="/about" target='_self'/>
                 <NavigationButton label="Contact" href="/contact" target='_self' />
             </div>
