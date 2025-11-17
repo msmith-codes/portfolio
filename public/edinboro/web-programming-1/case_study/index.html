@@ -7,12 +7,91 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Rubik's Cube Timer</h1>
-    <div id="timer">00:00.00</div>
-    <div id="label" style="margin-bottom:1em;color:#bbb;font-size:1.1em;">Press and hold <b>Space</b> to start the timer</div>
-    <div id="history">
-        <h2>History</h2>
-        <ul id="times"></ul>
+    <div class="grid">
+        <div class="col left">
+            <div id="history">
+                <h2>History</h2>
+                <ul id="times"></ul>
+            </div>
+        </div>
+
+        <div class="col center">
+            <h1>Rubik's Cube Timer</h1>
+            <div id="timer">00:00.00</div>
+            <div id="label" style="margin-bottom:1em;color:#bbb;font-size:1.1em;">Press and hold <b>Space</b> to start the timer</div>
+        </div>
+
+        <div class="col right">
+            <div id="add-time" style="margin-top:1.5em; max-width:400px; width:100%">
+        <h2>Add Time (manual)</h2>
+        <form id="addTimeForm">
+            <label for="addTimeInput">Time (MM:SS.mm):</label>
+            <div style="margin-top:0.5rem; display:flex; gap:0.5rem; align-items:center;">
+                <input id="addTimeInput" name="time" placeholder="01:23.45" style="width:10rem;padding:0.3rem;">
+                <button type="submit" style="padding:0.35rem 0.6rem;background:#10b981;border:none;border-radius:4px;color:white;cursor:pointer;">Add</button>
+            </div>
+
+            <div style="margin-top:0.75rem;">
+                <div style="margin-bottom:0.4rem;">Event type (required):</div>
+                <div>
+                    <input type="radio" id="event-3x3" name="addEvent" value="3x3" required>
+                    <label for="event-3x3">3x3</label>
+                </div>
+                <div>
+                    <input type="radio" id="event-4x4" name="addEvent" value="4x4">
+                    <label for="event-4x4">4x4</label>
+                </div>
+                <div>
+                    <input type="radio" id="event-2x2" name="addEvent" value="2x2">
+                    <label for="event-2x2">2x2</label>
+                </div>
+            </div>
+
+            <div style="margin-top:0.75rem;">
+                <label for="addSession">Session (required):</label>
+                <select id="addSession" style="display:block;margin-top:0.4rem;padding:0.3rem;width:100%">
+                    <option value="" disabled selected>Choose session</option>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                </select>
+            </div>
+
+            <div style="margin-top:0.75rem;display:flex;gap:0.5rem;align-items:center;">
+                <input type="checkbox" id="addPenalty" name="addPenalty">
+                <label for="addPenalty">Apply +2 second penalty</label>
+            </div>
+
+            <div style="margin-top:0.75rem;">
+                <label for="addNotes">Notes (optional, max 200 chars):</label>
+                <textarea id="addNotes" rows="3" style="width:100%;padding:0.3rem;margin-top:0.25rem;" placeholder="Optional notes..."></textarea>
+            </div>
+
+            <div id="addTimeError" aria-live="polite" style="margin-top:0.5rem;color:#ffb703;"></div>
+        </form>
+    </div>
+    <div id="averages" style="margin-top:1.5em; width:100%; max-width:400px;">
+        <h2>Averages</h2>
+        <table id="avgTable" style="width:100%;border-collapse:collapse;color:#ddd;">
+            <thead>
+                <tr style="text-align:left;">
+                    <th style="padding:6px 8px;border-bottom:1px solid #333;">Measure</th>
+                    <th style="padding:6px 8px;border-bottom:1px solid #333;">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding:6px 8px;">Average of 5 (AO5)</td>
+                    <td id="avg5Val" style="padding:6px 8px;">N/A</td>
+                </tr>
+                <tr>
+                    <td style="padding:6px 8px;">Average of 12 (AO12)</td>
+                    <td id="avg12Val" style="padding:6px 8px;">N/A</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        </div>
     </div>
     <script src="./script.js"></script>
 </body>

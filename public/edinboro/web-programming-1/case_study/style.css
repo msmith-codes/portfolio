@@ -1,21 +1,68 @@
-body {
-    font-family: Arial, sans-serif;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(420px, 1fr) 1fr;
+    gap: 2rem;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh; /* make grid fill viewport */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* prevent page scrolling */
     background: #181818;
     color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.col { box-sizing: border-box; }
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.left {
+    padding-right: 1rem;
+    border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+.right {
+    padding-left: 1rem;
+    border-left: 1px solid rgba(255,255,255,0.06);
+}
+
+.center {
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
+    justify-content: center; /* center timer vertically */
+    height: 100vh;
 }
+
 h1 {
-    margin-bottom: 0.5em;
+    margin: 0 0 0.5rem 0;
 }
+
 #timer {
-    font-size: 4em;
-    margin: 1em 0;
-    letter-spacing: 0.1em;
+    /* visually smaller timer while center column still fills the screen */
+    font-size: clamp(2rem, 6vw, 5rem);
+    max-width: 70%;
+    margin: 0.5rem auto;
+    padding: 1rem 0;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    background: transparent;
+    display: inline-block;
+    border-radius: 6px;
 }
 .controls button {
     font-size: 1.2em;
@@ -31,22 +78,48 @@ h1 {
 .controls button:active {
     background: #27ae60;
 }
+
 #history {
-    margin-top: 2em;
     width: 100%;
-    max-width: 400px;
 }
 #history h2 {
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
+    font-size: 1.1rem;
+    margin: 0 0 0.25rem 0;
+}
+
+/* Center the history header within the left column */
+.left #history h2 {
+    text-align: center;
 }
 #history ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 #history li {
     background: #222;
     margin-bottom: 0.3em;
     padding: 0.5em 1em;
     border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-btn {
+    background: transparent;
+    color: #ff6b6b;
+    border: 1px solid rgba(255,107,107,0.15);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Responsive fallback: stack columns on narrow viewports */
+@media (max-width: 900px) {
+    .grid { grid-template-columns: 1fr; gap: 1rem; padding: 1rem; }
+    html, body { overflow:auto; }
+    #timer { font-size: 3rem; }
+    .left { border-right: none; padding-right: 0; }
+    .right { border-left: none; padding-left: 0; }
 }
