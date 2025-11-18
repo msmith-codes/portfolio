@@ -40,7 +40,7 @@ const otherProjects = [
         description: "A repository full of all my Kattis Solutions.",
         image: "/portfolio/kattis.png",
         imageAlt: "Image of Kattis GitHub",
-        technologies: ["C++", "Kattis"],
+        technologies: ["C++", "Pythong", "Kattis"],
         link: { label: "Source Code →", url: "https://github.com/msmith-codes/KattisSolutions" }
     },
     {
