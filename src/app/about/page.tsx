@@ -58,7 +58,7 @@ export default function About() {
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold text-foreground font-mono">Current Focus</h2>
                     <p className="text-foreground/80 font-mono leading-relaxed">
-                        Currently I'm developing a small FPS called Mexel. 
+                        Currently I'm developing a small game engine called TankTek. 
                         The project is still in early development, but more information coming soon!
                     </p>
                 </section>
