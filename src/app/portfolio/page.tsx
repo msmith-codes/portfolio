@@ -32,7 +32,7 @@ const otherProjects = [
         image: "/portfolio/archbtw.png",
         imageAlt: "Image of IUseArchBtw.",
         technologies: ["C++", "CMake"],
-        link: { label: "View →", url: "https://github.com/msmith-codes/IUseArchBtw/" }
+        link: { label: "Source Code →", url: "https://github.com/msmith-codes/IUseArchBtw/" }
     },
     {
         id: 2,
@@ -42,6 +42,15 @@ const otherProjects = [
         imageAlt: "Image of Kattis GitHub",
         technologies: ["C++", "Kattis"],
         link: { label: "Source Code →", url: "https://github.com/msmith-codes/KattisSolutions" }
+    },
+    {
+        id: 3,
+        title: "HyMinions",
+        description: "A Hypixel Skyblock calendar website",
+        image: "/portfolio/hyminions.png",
+        imageAlt: "Image of HyMinions",
+        technologies: ["Next.js", "TypeScript"],
+        link: { label: "Visit →", url: "https://www.hyminions.com" }
     }
 ];
 
