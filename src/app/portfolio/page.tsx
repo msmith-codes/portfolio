@@ -159,17 +159,7 @@ export default function PortfolioPage() {
                 </section>
 
                 {/* Call to Action */}
-                <section className="text-center pt-8">
-                    <p className="text-foreground/80 font-mono mb-6">
-                        Want to see more of my work or discuss a project?
-                    </p>
-                    <a 
-                        href="/contact" 
-                        className="inline-block px-6 py-3 text-foreground hover:text-foreground/80 transition-colors font-mono border border-foreground/20 rounded hover:border-foreground/40"
-                    >
-                        Get in Touch
-                    </a>
-                </section>
+                
             </div>
         </main>
     );

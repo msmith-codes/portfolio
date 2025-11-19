@@ -72,19 +72,6 @@ export default function About() {
                         I enjoy video games, hockey, writing, music, and 3D printing.
                     </p>
                 </section>
-
-                {/* Call to Action */}
-                <section className="text-center pt-8">
-                    <p className="text-foreground/80 font-mono mb-6">
-                        Interested in working together or just want to chat?
-                    </p>
-                    <a 
-                        href="/contact" 
-                        className="inline-block px-6 py-3 text-foreground hover:text-foreground/80 transition-colors font-mono border border-foreground/20 rounded hover:border-foreground/40"
-                    >
-                        Get in Touch
-                    </a>
-                </section>
             </div>
         </main>
     );
