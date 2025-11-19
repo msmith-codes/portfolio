@@ -35,11 +35,11 @@ export default function NavigationBar()
     const applyTheme = (dark: boolean) => {
         const root = document.documentElement;
         if (dark) {
-            root.style.setProperty('--background', '#0a0a0a');
+            root.style.setProperty('--background', '#1d1d1d');
             root.style.setProperty('--foreground', '#ededed');
         } else {
             root.style.setProperty('--background', '#ededed');
-            root.style.setProperty('--foreground', '#0a0a0a');
+            root.style.setProperty('--foreground', '#1d1d1d');
         }
     };
 
