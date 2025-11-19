@@ -55,7 +55,7 @@ export default function NavigationBar()
             {/* Header with name and title */}
             <div className="mb-4 flex items-center gap-4">
                 <h1 className="text-2xl font-bold text-foreground font-mono">Michael Smith</h1>
-                <p className="text-lg text-foreground/80 font-mono">Game | Software Programmer</p>
+                <p className="text-lg text-foreground/80 font-mono">Game Developer | Software Programmer</p>
                 
                 {/* Theme Toggle Button */}
                 <button 

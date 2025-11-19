@@ -40,7 +40,8 @@ export default function About() {
                             <h3 className="text-xl font-bold text-foreground font-mono mb-2">Web Development</h3>
                             <ul className="text-foreground/80 font-mono">
                                 <li>Next.js</li>
-                                <li>HTML/CSS/JS</li>
+                                <li>JavaScript/TypeScript</li>
+                                <li>HTML/CSS</li>
                             </ul>
                         </div>
                         <div>
@@ -48,6 +49,7 @@ export default function About() {
                             <ul className="text-foreground/80 font-mono">
                                 <li>Editor: NeoVim</li>
                                 <li>OS: Arch Linux</li>
+                                <li>Window Manager: Hyprland</li>
                                 <li>Shell: Bash</li>
                             </ul>
                         </div>
