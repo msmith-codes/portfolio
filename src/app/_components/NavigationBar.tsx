@@ -72,6 +72,7 @@ export default function NavigationBar()
                 <NavigationButton label="Home" href="/" target='_self'/>
                 <NavigationButton label="Portfolio" href="/portfolio" target='_self'/>
                 <NavigationButton label="Resume" href="/resume.pdf" target='_blank'/>
+                <NavigationButton label="Edinboro" href="/edinboro" target='_self'/>
                 <NavigationButton label="About" href="/about" target='_self'/>
                 <NavigationButton label="Contact" href="/contact" target='_self' />
             </div>
