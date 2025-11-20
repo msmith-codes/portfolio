@@ -11,6 +11,7 @@ interface IClass
     credits : number;
     assignments : IAssignment[];
     tests : IAssignment[];
+    inclass : IAssignment[];
 }
 
 export default function Edinboro() 
@@ -31,6 +32,9 @@ export default function Edinboro()
             tests: [
                 { name: "Exam 1", href: "/edinboro/web-programming-1/exams/exam-1/index.html" },
                 { name: "Exam 2", href: "/edinboro/web-programming-1/exams/exam-2/index.html" }
+            ],
+            inclass: [
+                {name: "Trivia Game", href: "/edinboro/web-programming-1/in_class/trivia/index.html" },
             ]
         }   
     ]
@@ -66,6 +70,33 @@ export default function Edinboro()
                                         </span>
                                     </div>
                                 </div>
+                                
+                                {/* In Class */}
+                                <div className="space-y-3">
+                                    <h4 className="text-lg font-bold text-foreground font-mono">In Class</h4>
+                                    <div className="space-y-2">
+                                        {classItem.inclass.length > 0 ? (
+                                            classItem.inclass.map((inclass: IAssignment, inclassIndex: number) => (
+                                                <div key={inclassIndex} className="flex justify-between items-center p-3 bg-foreground/5 rounded border-l-4 border-red-500/50">
+                                                    <div>
+                                                        <a 
+                                                            href={inclass.href} 
+                                                            className="text-foreground font-mono font-semibold hover:text-foreground/80 transition-colors"
+                                                        >
+                                                            {inclass.name}
+                                                        </a>
+                                                        <p className="text-foreground/60 font-mono text-sm">Click to view assignment</p>
+                                                    </div>
+                                                </div>
+                                            ))
+                                        ) : (
+                                            <div className="p-3 bg-foreground/5 rounded border-l-4 border-foreground/20">
+                                                <p className="text-foreground/60 font-mono text-sm text-center">No assignments available yet</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+
 
                                 {/* Assignments */}
                                 <div className="space-y-3">
