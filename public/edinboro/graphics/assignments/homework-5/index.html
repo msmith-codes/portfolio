@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <script id="vertex-shader" type="x-shader/x-vertex">
+            precision mediump float;
+
+            attribute vec4 attributePosition;
+            attribute float attributeBC;
+
+            uniform mat4 uniformTransform;
+            uniform mat4 uniformProject;
+
+            varying vec3 varyingBC;
+
+            void main() {
+                gl_Position = uniformProject * uniformTransform *  attributePosition;
+                if (attributeBC == 0.0) {
+                    varyingBC = vec3(1.0, 0.0, 0.0);
+                } else if (attributeBC == 1.0) {
+                    varyingBC = vec3(0.0, 1.0, 0.0);
+                } else {
+                    varyingBC = vec3(0.0, 0.0, 1.0);
+                }
+            }
+        </script>
+        <script id="fragment-shader" type="x-shader/x-fragment">
+            precision mediump float;
+            varying vec3 varyingBC;
+            uniform vec4 uniformEdgeColor;
+            uniform vec4 uniformSurfaceColor;
+
+            // wireframe shader
+            void main(){
+                // front face
+                if (gl_FrontFacing) {  
+                    if (any(lessThan(varyingBC, vec3(0.005)))) {
+                        gl_FragColor= uniformEdgeColor;
+                    } else {
+                        gl_FragColor= uniformSurfaceColor;
+                    }
+                } else {
+                    // back facing
+                    if (any(lessThan(varyingBC, vec3(0.005)))) {
+                        gl_FragColor= uniformEdgeColor;
+	                } else {
+	                    discard;
+	                }
+                }
+            }
+        </script>
+
+
+        <script type="text/javascript" src="https://mirkwood.cs.edinboro.edu/~bennett/f360-19/Common/webgl-utils.js"></script>
+        <script type="text/javascript" src="https://mirkwood.cs.edinboro.edu/~bennett/f360-19/Common/initShaders.js"></script>
+        <script type="text/javascript" src="https://mirkwood.cs.edinboro.edu/~bennett/f360-19/Common/MV.js"></script>  
+
+        <script type="text/javascript" src="https://mirkwood.cs.edinboro.edu/~bennett/f360-19/Models/teapot.js"></script>
+        <script type="text/javascript" src="https://mirkwood.cs.edinboro.edu/~bennett/f360-19/Models/bunny.js"></script>
+        <script type="text/javascript" src="https://mirkwood.cs.edinboro.edu/~bennett/f360-19/Models/dragon.js"></script>
+        <script type="text/javascript" src="https://mirkwood.cs.edinboro.edu/~bennett/f360-19/Models/lizard.js"></script>
+        <script type="text/javascript" src="https://mirkwood.cs.edinboro.edu/~bennett/f360-19/Models/epcot.js"></script>
+
+            </head>
+    <body>  
+        <h1>Homework 5</h1>
+        <table border>
+            <tr>
+                <td><div id="canvasSpace"></div></td>
+                <td>
+                    <p>Eye: <span id="eyePos"></span></p>
+                    <p>At: <span id="atPos"></span></p>
+                    <p>Use the following to move</p>
+                <table border>
+                        <tr><td align="center">Q <p>Look Down</p></td><td align="center">W <p>Forward</p></td><td align="center">E <p>Look Up</p></td></tr>
+                        <tr><td align="center">A <p>Spin Left</p></td><td align="center">R <p>Reset</p></td><td align="center">D <p>Spin Right</p></td></tr>
+                        <tr><td align="center">Z <p>&nbsp;</p></td><td align="center">S <p>Back</p></td><td align="center">C <p>&nbsp;</p></td></tr>
+                </table>
+                Locations
+                <ul>
+                    <li>The Teapot is at (0, 4.75, 4)</li>
+                    <li>The Bunny is at (-4, 4.75, 0)</li>
+                    <li>The Dragon is at (0, 4.75, -4)</li>
+                    <li>The Godzilla is at (4, 4.75, 0)</li>
+                </ul>
+                </td>
+                <td>
+                    Press:
+                    <ul>
+                        <li>F for frustum</li>
+                        <li>P for projection</li>
+                    </ul>
+                    <p>
+                        Projection: <span id="projectionValue"></span>
+                    </p>
+                    <table>
+                        <tr><th>X</th><td> <input type='button' id="Xminus" value ="-"/></td><td>
+                            <input type='button' id="Xplus" value ="+"/></td><td>
+                                <span id="XValue">0</span></td></tr>
+                        <p>
+                            <tr><th>Y</th><td> <input type='button' id="Yminus" value ="-"/></td><td>
+                                <input type='button' id="Yplus" value ="+"/></td><td>
+                                    <span id="YValue">0</span></td></tr>
+                        </p>
+                        <p>
+                            <tr><th>Near</th><td> <input type='button' id="Nearminus" value ="-"/></td><td>
+                                <input type='button' id="Nearplus" value ="+"/></td><td>
+                                    <span id="NearValue">0</span></td></tr>
+                        </p>
+                        <p>
+                            <tr><th>Far</th><td> <input type='button' id="Farminus" value ="-"/></td><td>
+                                <input type='button' id="Farplus" value ="+"/></td><td>
+                                    <span id="FarValue">0</span></td></tr>
+                        </p>
+                        <p>
+                            <tr><th>FOV</th><td> <input type='button' id="FOVminus" value ="-"/></td><td>
+                                <input type='button' id="FOVplus" value ="+"/></td><td>
+                                    <span id="FOVValue">0</span></td></tr>
+                        </p>
+                        <p>
+                            <tr><th>Aspect</th><td> <input type='button' id="Aspectminus" value ="-"/></td><td>
+                                <input type='button' id="Aspectplus" value ="+"/></td><td>
+                                    <span id="AspectValue">0</span></td></tr>
+                        </p>
+                    </table>
+                    <center>
+                        <input type="button" id ="Reset", value="Reset"/>
+                    </center>
+                </td>
+            </tr>
+        </table>
+
+        <script type="text/javascript" src="GLCanvas.js"></script>
+        <script type="text/javascript" src="Widget.js"></script>
+        <script type="text/javascript" src="world.js"></script>
+        <script type="text/javascript" src="ui.js"></script>
+    </body>
+    
+</html>
