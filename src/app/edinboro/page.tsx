@@ -28,7 +28,8 @@ export default function Edinboro()
                 { name: "Project 03-02", href: "/edinboro/web-programming-1/assignments/project03-02/index.html" },
                 { name: "Project 05-01", href: "/edinboro/web-programming-1/assignments/project05-01/index.html" },
                 { name: "Project 06-03", href: "/edinboro/web-programming-1/assignments/project06-03/index.html" },
-                { name: "Project 07-02", href: "/edinboro/web-programming-1/assignments/project07-02/index.html" }
+                { name: "Project 07-02", href: "/edinboro/web-programming-1/assignments/project07-02/index.html" },
+                { name: "Project 08-02", href: "/edinboro/web-programming-1/assignments/project08-02/index.html" }
             ],
             tests: [
                 { name: "Exam 1", href: "/edinboro/web-programming-1/exams/exam-1/index.html" },
