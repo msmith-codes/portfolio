@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trivia Game</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin-top: 20px;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 10px;
+                text-align: left;
+            }
+            th {
+                background-color: #f0f0f0;
+            }
+            button {
+                margin-top: 20px;
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Computer Trivia Quiz</h1>
+        <button id="loadBtn">Load Questions</button>
+        <div id="loading" style="display:none;">Loading...</div>
+        
+        <form id="quizForm">
+            <table id="questionsTable" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Question</th>
+                        <th>Answers</th>
+                    </tr>
+                </thead>
+                <tbody id="questionsBody">
+                </tbody>
+            </table>
+            <button type="submit" id="submitBtn" style="display:none;">Submit Quiz</button>
+        </form>
+        
+        <div id="results" style="display:none; margin-top:20px;">
+            <h2>Results</h2>
+            <p id="score"></p>
+        </div>
+
+        <script>
+            let questions = [];
+            
+            function decodeHTML(html) {
+                const txt = document.createElement('textarea');
+                txt.innerHTML = html;
+                return txt.value;
+            }
+            
+            document.getElementById('loadBtn').addEventListener('click', async function() {
+                document.getElementById('loading').style.display = 'block';
+                document.getElementById('loadBtn').style.display = 'none';
+                
+                try {
+                    const response = await fetch('https://opentdb.com/api.php?amount=10&category=18&type=multiple');
+                    const data = await response.json();
+                    
+                    if (data.response_code === 0) {
+                        questions = data.results.map(q => ({
+                            question: decodeHTML(q.question),
+                            correctAnswer: decodeHTML(q.correct_answer),
+                            allAnswers: [...q.incorrect_answers.map(a => decodeHTML(a)), decodeHTML(q.correct_answer)].sort(() => Math.random() - 0.5)
+                        }));
+                        
+                        displayQuestions();
+                    }
+                } catch (error) {
+                    alert('Error loading questions');
+                }
+                
+                document.getElementById('loading').style.display = 'none';
+            });
+            
+            function displayQuestions() {
+                const tbody = document.getElementById('questionsBody');
+                tbody.innerHTML = '';
+                
+                questions.forEach((q, index) => {
+                    const row = document.createElement('tr');
+                    
+                    const numCell = document.createElement('td');
+                    numCell.textContent = index + 1;
+                    row.appendChild(numCell);
+                    
+                    const questionCell = document.createElement('td');
+                    questionCell.textContent = q.question;
+                    row.appendChild(questionCell);
+                    
+                    const answersCell = document.createElement('td');
+                    q.allAnswers.forEach((answer, i) => {
+                        const radio = document.createElement('input');
+                        radio.type = 'radio';
+                        radio.name = 'question' + index;
+                        radio.value = answer;
+                        radio.id = 'q' + index + 'a' + i;
+                        
+                        const label = document.createElement('label');
+                        label.htmlFor = 'q' + index + 'a' + i;
+                        label.textContent = answer;
+                        
+                        answersCell.appendChild(radio);
+                        answersCell.appendChild(label);
+                        answersCell.appendChild(document.createElement('br'));
+                    });
+                    row.appendChild(answersCell);
+                    
+                    tbody.appendChild(row);
+                });
+                
+                document.getElementById('questionsTable').style.display = 'table';
+                document.getElementById('submitBtn').style.display = 'block';
+            }
+            
+            document.getElementById('quizForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                let score = 0;
+                questions.forEach((q, index) => {
+                    const selected = document.querySelector('input[name="question' + index + '"]:checked');
+                    if (selected && selected.value === q.correctAnswer) {
+                        score++;
+                    }
+                });
+                
+                document.getElementById('score').textContent = 'You scored ' + score + ' out of ' + questions.length;
+                document.getElementById('results').style.display = 'block';
+            });
+        </script>
+    </body>
+</html>

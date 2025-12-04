@@ -29,14 +29,17 @@ export default function Edinboro()
                 { name: "Project 05-01", href: "/edinboro/web-programming-1/assignments/project05-01/index.html" },
                 { name: "Project 06-03", href: "/edinboro/web-programming-1/assignments/project06-03/index.html" },
                 { name: "Project 07-02", href: "/edinboro/web-programming-1/assignments/project07-02/index.html" },
-                { name: "Project 08-02", href: "/edinboro/web-programming-1/assignments/project08-02/index.html" }
+                { name: "Project 08-02", href: "/edinboro/web-programming-1/assignments/project08-02/index.html" },
+                { name: "Chapter 8 - JSON", href: "/edinboro/web-programming-1/assignments/chapter8json/index.html" },
+                { name: "Project 09-01", href: "/edinboro/web-programming-1/assignments/project09-01/index.html" },
+                { name: "Project 10-02", href: "/edinboro/web-programming-1/assignments/project10-02/index.html" },
             ],
             tests: [
                 { name: "Exam 1", href: "/edinboro/web-programming-1/exams/exam-1/index.html" },
                 { name: "Exam 2", href: "/edinboro/web-programming-1/exams/exam-2/index.html" }
             ],
             inclass: [
-                {name: "Trivia Game", href: "/edinboro/web-programming-1/in_class/trivia/index.html" },
+                { name: "Trivia Game", href: "/edinboro/web-programming-1/in_class/trivia/index.html" },
             ]
         }   
     ];
