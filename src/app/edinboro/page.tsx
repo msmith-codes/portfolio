@@ -36,7 +36,8 @@ export default function Edinboro()
             ],
             tests: [
                 { name: "Exam 1", href: "/edinboro/web-programming-1/exams/exam-1/index.html" },
-                { name: "Exam 2", href: "/edinboro/web-programming-1/exams/exam-2/index.html" }
+                { name: "Exam 2", href: "/edinboro/web-programming-1/exams/exam-2/index.html" },
+                { name: "Final Exam", href: "/edinboro/web-programming-1/exams/final/index.html" }
             ],
             inclass: [
                 { name: "Trivia Game", href: "/edinboro/web-programming-1/in_class/trivia/index.html" },

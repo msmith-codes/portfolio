@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Exam</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer>
+           
+        </script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <h1>Salary Reader</h1>
+            <div id="cookieData">
+                <p><strong>Last Name:</strong> <span id="displayLastname"></span></p>
+                <p><strong>Salary:</strong> <span id="displaySalary"></span></p>
+            </div>
+            
+            <footer>
+                <p><a href="./part1-write.html">Go to Part 1 Write Page</a></p>
+                <p><a href="./index.html">Go to Index Page</a></p>
+                <p>Last Updated: <span id="last-updated"></span></p>
+            </footer>
+        </div>
+    </body>
+
+    <script>
+        function getLastUpdated() {
+            document.getElementById("last-updated").innerHTML = new Date(document.lastModified);
+        }
+        getLastUpdated();
+
+        // Function to get cookie value by name
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const cookies = document.cookie.split(';');
+            for(let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i].trim();
+                if (cookie.indexOf(nameEQ) === 0) {
+                    return cookie.substring(nameEQ.length);
+                }
+            }
+            return null;
+        }
+
+        // Display cookie data on page load
+        window.onload = function() {
+            const lastname = getCookie("lastname");
+            const salary = getCookie("salary");
+            
+            document.getElementById("displayLastname").innerHTML = lastname || "No data found";
+            document.getElementById("displaySalary").innerHTML = salary || "No data found";
+        };
+    </script>
+</html>

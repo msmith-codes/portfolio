@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Exam</title>
+        <link rel="stylesheet" href="style.css">    
+        <script defer>
+            // Handle form submission
+            document.getElementById("dataForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                
+                // Get form values
+                const lastname = document.getElementById("lastname").value;
+                const salary = document.getElementById("salary").value;
+                
+                // Calculate expiration date (2 days from now)
+                const expirationDate = new Date();
+                expirationDate.setDate(expirationDate.getDate() + 2);
+                const expires = "expires=" + expirationDate.toUTCString();
+                
+                // Set cookies
+                document.cookie = "lastname=" + lastname + ";" + expires + ";path=/";
+                document.cookie = "salary=" + salary + ";" + expires + ";path=/";
+                
+                alert("Data saved in cookies for 2 days!");
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <h1>Salary Saver</h1>
+            <form id="dataForm">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname">
+                <br><br>
+                
+                <label for="salary">Salary:</label>
+                <input type="text" id="salary" name="salary">
+                <br><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+
+            <footer>
+                <p><a href="./part1-read.html">Go to Part 1 Read Page</a></p>
+                <p><a href="./index.html">Go to Index Page</a></p>
+                <p>Last Updated: <span id="last-updated"></span></p>
+            </footer>
+        </div>
+    </body>
+
+    <script>
+        function getLastUpdated() {
+            document.getElementById("last-updated").innerHTML = new Date(document.lastModified);
+        }
+        getLastUpdated();
+    </script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Exam</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <h1>Web Programming 1 - Final Exam</h1>
+            <ul>
+                <li><a href="./part1-write.html">Part 1</a></li>
+                <li><a href="./part2.html">Part 2</a></li>
+            </ul>
+
+            <footer>
+                <p>Last Updated: <span id="last-updated"></span></p>
+            </footer>
+        </div>
+    </body>
+
+    <script>
+        function getLastUpdated() {
+            document.getElementById("last-updated").innerHTML = new Date(document.lastModified);
+        }
+        getLastUpdated();
+    </script>
+</html>

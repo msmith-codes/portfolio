@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Final Exam</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <h1>Cars from JSON</h1>
+            <button id="loadButton">Load Cars Data</button>
+            <div id="tableContainer"></div>
+
+            <footer>
+                <p>Last Updated: <span id="last-updated"></span></p>
+            </footer>
+        </div>
+        
+        
+    </body>
+
+    <script>
+        function getLastUpdated() {
+            document.getElementById("last-updated").innerHTML = new Date(document.lastModified);
+        }
+        getLastUpdated();
+
+        // Load cars data when button is clicked
+        document.getElementById("loadButton").addEventListener("click", function() {
+            fetch("https://devweb1.cis.pennwest.edu/~dtucker/Fall2025_FinalExam/cars.json")
+                .then(response => response.json())
+                .then(data => {
+                    createTable(data);
+                })
+                .catch(error => {
+                    console.error("Error loading cars data:", error);
+                    alert("Error loading data!");
+                });
+        });
+
+        function createTable(cars) {
+            let tableHTML = "<table border='1'>";
+            tableHTML += "<thead><tr>";
+            tableHTML += "<th>model</th>";
+            tableHTML += "<th>image</th>";
+            tableHTML += "<th>mpg</th>";
+            tableHTML += "<th>cyl</th>";
+            tableHTML += "<th>disp</th>";
+            tableHTML += "<th>hp</th>";
+            tableHTML += "<th>drat</th>";
+            tableHTML += "<th>wt</th>";
+            tableHTML += "<th>dsec</th>";
+            tableHTML += "<th>vs</th>";
+            tableHTML += "<th>am</th>";
+            tableHTML += "<th>ear</th>";
+            tableHTML += "<th>carb</th>";
+            tableHTML += "</tr></thead>";
+            tableHTML += "<tbody>";
+
+            cars.forEach(car => {
+                tableHTML += "<tr>";
+                tableHTML += "<td>" + car.model + "</td>";
+                tableHTML += "<td><img src='" + car.image + "' alt='" + car.model + "' width='100'></td>";
+                tableHTML += "<td>" + car.mpg + "</td>";
+                tableHTML += "<td>" + car.cyl + "</td>";
+                tableHTML += "<td>" + car.disp + "</td>";
+                tableHTML += "<td>" + car.hp + "</td>";
+                tableHTML += "<td>" + car.drat + "</td>";
+                tableHTML += "<td>" + car.wt + "</td>";
+                tableHTML += "<td>" + car.dsec + "</td>";
+                tableHTML += "<td>" + car.vs + "</td>";
+                tableHTML += "<td>" + car.am + "</td>";
+                tableHTML += "<td>" + car.ear + "</td>";
+                tableHTML += "<td>" + car.carb + "</td>";
+                tableHTML += "</tr>";
+            });
+
+            tableHTML += "</tbody></table>";
+            document.getElementById("tableContainer").innerHTML = tableHTML;
+        }
+    </script>
+</html>
