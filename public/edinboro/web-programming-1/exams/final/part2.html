@@ -29,7 +29,6 @@
         getLastUpdated();
 
         document.getElementById("loadButton").addEventListener("click", function() {
-            const proxyUrl = "https://corsproxy.io/?"; 
             const targetUrl = "https://devweb1.cis.pennwest.edu/~dtucker/Fall2025_FinalExam/cars.json";
             
             fetch(proxyUrl + encodeURIComponent(targetUrl))
