@@ -1,0 +1,80 @@
+{
+"cars_data": [
+  {
+    "model": "Mazda RX4",
+    "image": "https://devweb1.cis.pennwest.edu/~dtucker/Fall2025_FinalExam/MazdaRX4.jpg",
+    "mpg": 21,
+    "cyl": 6,
+    "disp": 160,
+    "hp": 110,
+    "drat": 3.9,
+    "wt": 2.62,
+    "qsec": 16.46,
+    "vs": 0,
+    "am": 1,
+    "gear": 4,
+    "carb": 4
+  },
+  {
+    "model": "Datsun 710",
+    "image": "https://devweb1.cis.pennwest.edu/~dtucker/Fall2025_FinalExam/Datsun710.jpg",
+    "mpg": 22.8,
+    "cyl": 4,
+    "disp": 108,
+    "hp": 93,
+    "drat": 3.85,
+    "wt": 2.32,
+    "qsec": 18.61,
+    "vs": 1,
+    "am": 1,
+    "gear": 4,
+    "carb": 1
+  },
+  {
+    "model": "Hornet 4 Drive",
+    "image": "https://devweb1.cis.pennwest.edu/~dtucker/Fall2025_FinalExam/Hornet.jpg",
+    "mpg": 21.4,
+    "cyl": 6,
+    "disp": 258,
+    "hp": 110,
+    "drat": 3.08,
+    "wt": 3.215,
+    "qsec": 19.44,
+    "vs": 1,
+    "am": 0,
+    "gear": 3,
+    "carb": 1
+  },
+  {
+    "model": "Valiant",
+    "image": "https://devweb1.cis.pennwest.edu/~dtucker/Fall2025_FinalExam/Valiant.jpg",
+    "mpg": 18.1,
+    "cyl": 6,
+    "disp": 225,
+    "hp": 105,
+    "drat": 2.76,
+    "wt": 3.46,
+    "qsec": 20.22,
+    "vs": 1,
+    "am": 0,
+    "gear": 3,
+    "carb": 1
+  },
+  {
+    "model": "Duster 360",
+    "image": "https://devweb1.cis.pennwest.edu/~dtucker/Fall2025_FinalExam/Duster360.jpg",
+    "mpg": 14.3,
+    "cyl": 8,
+    "disp": 360,
+    "hp": 245,
+    "drat": 3.21,
+    "wt": 3.57,
+    "qsec": 15.84,
+    "vs": 0,
+    "am": 0,
+    "gear": 3,
+    "carb": 4
+  }
+
+]
+}

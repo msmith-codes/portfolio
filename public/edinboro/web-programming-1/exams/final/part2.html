@@ -29,9 +29,10 @@
         getLastUpdated();
 
         document.getElementById("loadButton").addEventListener("click", function() {
+            const proxyUrl = "https://corsproxy.io/?"; // Using CORS proxy to avoid CORS issues. Issue with using my own server?
             const targetUrl = "https://devweb1.cis.pennwest.edu/~dtucker/Fall2025_FinalExam/cars.json";
             
-            fetch(targetUrl)
+            fetch(proxyUrl + encodeURIComponent(targetUrl))
                 .then(response => response.json())
                 .then(data => {
                     createTable(data);
