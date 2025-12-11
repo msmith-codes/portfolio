@@ -31,7 +31,7 @@
         document.getElementById("loadButton").addEventListener("click", function() {
             const targetUrl = "https://devweb1.cis.pennwest.edu/~dtucker/Fall2025_FinalExam/cars.json";
             
-            fetch(proxyUrl + encodeURIComponent(targetUrl))
+            fetch(targetUrl)
                 .then(response => response.json())
                 .then(data => {
                     createTable(data);
