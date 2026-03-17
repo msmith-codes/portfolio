@@ -27,12 +27,12 @@ export default function About() {
                 {/* Skills & Expertise */}
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold text-foreground font-mono">Skills & Expertise</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                         <div>
                             <h3 className="text-xl font-bold text-foreground font-mono mb-2">Software Development</h3>
                             <ul className="text-foreground/80 font-mono">
                                 <li>C/C++</li>
-                                <li>Go</li>
+                                <li>GoLang</li>
                                 <li>Java</li>
                             </ul>
                         </div>
@@ -45,10 +45,18 @@ export default function About() {
                             </ul>
                         </div>
                         <div>
+                            <h3 className="text-xl font-bold text-foreground font-mono mb-2">Game Development</h3>
+                            <ul className="text-foreground/80 font-mono">
+                                <li>Raylib (C++)</li>
+                                <li>Godot (GDScript)</li>
+                            </ul>
+                        </div>
+
+                        <div>
                             <h3 className="text-xl font-bold text-foreground font-mono mb-2">Editor and Setup</h3>
                             <ul className="text-foreground/80 font-mono">
                                 <li>Editor: NeoVim</li>
-                                <li>OS: Arch Linux</li>
+                                <li>OS: Arch Linux... btw</li>
                                 <li>Window Manager: Hyprland</li>
                                 <li>Shell: Bash</li>
                             </ul>
@@ -60,7 +68,7 @@ export default function About() {
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold text-foreground font-mono">Current Focus</h2>
                     <p className="text-foreground/80 font-mono leading-relaxed">
-                        Currently I'm developing a small game engine called TankTek. 
+                        Currently I'm developing a small tank game called Tank Arena. 
                         The project is still in early development, but more information coming soon!
                     </p>
                 </section>
