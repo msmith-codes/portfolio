@@ -77,7 +77,7 @@ export default function About() {
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold text-foreground font-mono">Beyond Code</h2>
                     <p className="text-foreground/80 font-mono leading-relaxed">
-                        I enjoy video games, hockey, writing, music, and 3D printing.
+                        I enjoy video games, hockey, Rubik's Cubes, writing, music, and 3D printing.
                     </p>
                 </section>
             </div>
