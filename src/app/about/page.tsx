@@ -1,4 +1,5 @@
-export default function About() {
+export default function AboutPage() 
+{
     return (
         <main className="max-w-6xl mx-auto px-12 py-8">
             <div className="space-y-8">
@@ -20,7 +21,7 @@ export default function About() {
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold text-foreground font-mono">Education</h2>
                     <ul className="text-foreground/80 font-mono">
-                        <li>Pennsylvania Western University at Edinboro - Applied Computing</li>
+                        <li>2026: Pennsylvania Western University at Edinboro - Applied Computing</li>
                     </ul>
                 </section>
 
@@ -47,7 +48,7 @@ export default function About() {
                         <div>
                             <h3 className="text-xl font-bold text-foreground font-mono mb-2">Game Development</h3>
                             <ul className="text-foreground/80 font-mono">
-                                <li>Raylib (C++)</li>
+                                <li>Raylib (C/C++)</li>
                                 <li>Godot (GDScript)</li>
                             </ul>
                         </div>
