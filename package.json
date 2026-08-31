@@ -8,6 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@svg-maps/canada": "^2.0.0",
+    "@svg-maps/usa": "^2.0.0",
+    "@svg-maps/world": "^2.0.0",
     "next": "^16.1.7",
     "react": "19.1.0",
     "react-dom": "19.1.0"

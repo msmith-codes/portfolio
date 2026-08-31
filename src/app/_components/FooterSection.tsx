@@ -1,8 +1,7 @@
 
-export default function CallToAction()
+export default function FooterSection()
 {
     return (
-
         <section className="text-center p-6">
             <hr className="border-foreground/20 mb-4" />
             <p className="text-foreground/80 font-mono mb-6">
