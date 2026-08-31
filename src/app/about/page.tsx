@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutPage() 
 {
     return (
@@ -78,7 +80,12 @@ export default function AboutPage()
                 <section className="space-y-4">
                     <h2 className="text-2xl font-bold text-foreground font-mono">Beyond Code</h2>
                     <p className="text-foreground/80 font-mono leading-relaxed">
-                        I enjoy video games, hockey, Rubik's Cubes, writing, music, and 3D printing.
+                        I enjoy video games, hockey, Rubik's Cubes, writing, music, <Link 
+                            className="underline text-blue-500" 
+                            href={"/travels"}
+                        >
+                            traveling
+                        </Link>, and 3D printing.
                     </p>
                 </section>
             </div>
